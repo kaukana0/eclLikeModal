@@ -9,6 +9,7 @@ class Element extends HTMLElement {
 		this.shadowRoot.appendChild(tmp)
 		this.shadowRoot.getElementById("button").addEventListener("click", e=> {this.hide()})
 		this.shadowRoot.getElementById("button2").addEventListener("click", e=> {this.hide()})
+		this.shadowRoot.getElementById("bg").addEventListener("click", e=> {this.hide()})
 	}
 
 	setText(val) {
