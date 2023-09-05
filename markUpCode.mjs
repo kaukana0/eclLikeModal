@@ -35,13 +35,12 @@ export default class MarkUpCode {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width:90%;
     z-index:1001;
     background-color:white;
     border-radius:4px;">
     
       <header class="ecl-modal__header" style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid; border-color:#dee2e6;">
-        <div class="ecl-modal__header-content" id="header" style="font: normal normal 400 1.125rem/1.75rem arial,sans-serif; padding-left: 20px;">
+        <div class="ecl-modal__header-content" id="header" style="padding: 20px 0px 20px 20px; font-weight: 700; font-size:20px; color:#515560;">
           Lorem ipsum dolor sit amet
         </div>
         <button class="ecl-button ecl-button--ghost ecl-modal__close" type="button" data-ecl-modal-close id="button" style="padding-right: 20px;">
@@ -54,7 +53,12 @@ export default class MarkUpCode {
         </button>
       </header>
 
-      <div class="ecl-modal__body" id="text" style="font:normal normal 400 1rem/1.5rem arial,sans-serif; padding:20px 20px 20px 20px">
+      <div class="" id="text" style="
+        /*font:normal normal 400 1rem/1.5rem arial,sans-serif; */
+        padding:20px 20px 20px 20px; 
+        overflow-y:auto; 
+        height:45vh;
+      ">
         Sed quam augue, volutpat sed dapibus in, accumsan a arcu. Nulla quam enim, porttitor at neque a, egestas porttitor tortor. Nam tortor sem, elementum id augue quis, posuere vestibulum dui. Donec id posuere libero, sit amet egestas lorem. Aliquam finibus ipsum mauris, a molestie tortor laoreet.
       </div>
 
@@ -74,6 +78,19 @@ export default class MarkUpCode {
   static css() {
     return `
     <style>
+    #text h4 {
+      font-size: 1.5rem;
+      font-weight: 500 !important; 
+      line-height: 1.2 !important;
+      color: #515560 !important; 
+      font-size: 1.5rem !important;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    #text p {
+      color: #515560;
+      font-size: 1rem;
+    }
     </style>   
     `
   }

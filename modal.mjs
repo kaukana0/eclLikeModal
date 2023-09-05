@@ -10,6 +10,8 @@ class Element extends HTMLElement {
 		this.shadowRoot.getElementById("button").addEventListener("click", e=> {this.hide()})
 		this.shadowRoot.getElementById("button2").addEventListener("click", e=> {this.hide()})
 		this.shadowRoot.getElementById("bg").addEventListener("click", e=> {this.hide()})
+
+		this.shadowRoot.appendChild(MarkUpCode.getHtmlTemplate(MarkUpCode.css()).cloneNode(true))
 	}
 
 	setText(val) {
