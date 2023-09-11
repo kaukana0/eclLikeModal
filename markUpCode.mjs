@@ -31,7 +31,7 @@ export default class MarkUpCode {
     <div class="" id="main" style="
     display:none;
     position: fixed;
-    overflow:hidden;
+    overflow:auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -57,7 +57,7 @@ export default class MarkUpCode {
         /*font:normal normal 400 1rem/1.5rem arial,sans-serif; */
         padding:20px 20px 20px 20px; 
         overflow-y:auto; 
-        height:45vh;
+        max-height:45vh;
       ">
         Sed quam augue, volutpat sed dapibus in, accumsan a arcu. Nulla quam enim, porttitor at neque a, egestas porttitor tortor. Nam tortor sem, elementum id augue quis, posuere vestibulum dui. Donec id posuere libero, sit amet egestas lorem. Aliquam finibus ipsum mauris, a molestie tortor laoreet.
       </div>
