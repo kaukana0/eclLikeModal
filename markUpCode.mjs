@@ -87,7 +87,7 @@ export default class MarkUpCode {
       margin-top: 5px;
       margin-bottom: 5px;
     }
-    #text p {
+    #text p, li {
       color: #515560;
       font-size: 1rem;
     }
