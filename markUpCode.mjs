@@ -28,13 +28,11 @@ export default class MarkUpCode {
       background-color: rgba(0,0,0,0.4);">
     </div>
 
-    <div class="" id="main" style="
+    <div class="horizontal" id="main" style="
     display:none;
     position: fixed;
     overflow:auto;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index:1001;
     background-color:white;
     border-radius:4px;">
@@ -90,6 +88,18 @@ export default class MarkUpCode {
     #text p, li {
       color: #515560;
       font-size: 1rem;
+    }
+
+    .horizontal {
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @media (max-width: 840px) {
+      .horizontal {
+        left: 0px;
+        transform: translate(0, -50%);
+      }
     }
     </style>   
     `
