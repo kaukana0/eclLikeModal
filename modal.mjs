@@ -11,6 +11,11 @@ class Element extends HTMLElement {
 		this.shadowRoot.getElementById("button2").addEventListener("click", e=> {this.hide()})
 		this.shadowRoot.getElementById("bg").addEventListener("click", e=> {this.hide()})
 
+		this.shadowRoot.getElementById("button").addEventListener("keyup", e=> {if(e.key=="Enter" || e.key=="Escape") {this.hide()}} )
+		this.shadowRoot.getElementById("button2").addEventListener("keyup", e=> {if(e.key=="Enter" || e.key=="Escape") {this.hide()}} )
+		this.shadowRoot.getElementById("bg").addEventListener("keyup", e=> {if(e.key=="Escape") {this.hide()}} )
+		this.shadowRoot.firstElementChild.addEventListener("keyup", e=> {if(e.key=="Escape") {this.hide()}} )
+
 		this.shadowRoot.appendChild(MarkUpCode.getHtmlTemplate(MarkUpCode.css()).cloneNode(true))
 	}
 
@@ -24,6 +29,7 @@ class Element extends HTMLElement {
 		this.shadowRoot.getElementById("main").style.display="block"
 		this.shadowRoot.getElementById("bg").style.display="block"
 		//setTimeout(()=>this.hide(), 7000)
+		this.shadowRoot.getElementById("button2").focus()
 	}
 	hide() {
 		this.shadowRoot.getElementById("bg").style.display="none"
