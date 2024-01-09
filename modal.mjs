@@ -11,10 +11,10 @@ class Element extends HTMLElement {
 		this.shadowRoot.getElementById("button2").addEventListener("click", e=> {this.hide()})
 		this.shadowRoot.getElementById("bg").addEventListener("click", e=> {this.hide()})
 
-		this.shadowRoot.getElementById("button").addEventListener("keyup", e=> {if(e.key=="Enter" || e.key=="Escape") {this.hide()}} )
-		this.shadowRoot.getElementById("button2").addEventListener("keyup", e=> {if(e.key=="Enter" || e.key=="Escape") {this.hide()}} )
-		this.shadowRoot.getElementById("bg").addEventListener("keyup", e=> {if(e.key=="Escape") {this.hide()}} )
-		this.shadowRoot.firstElementChild.addEventListener("keyup", e=> {if(e.key=="Escape") {this.hide()}} )
+		this.shadowRoot.getElementById("button").addEventListener("keydown", e=> {if(e.key=="Enter" || e.key=="Escape") {this.hide()}} )
+		this.shadowRoot.getElementById("button2").addEventListener("keydown", e=> {if(e.key=="Enter" || e.key=="Escape") {this.hide()}} )
+		this.shadowRoot.getElementById("bg").addEventListener("keydown", e=> {if(e.key=="Escape") {this.hide()}} )
+		this.shadowRoot.firstElementChild.addEventListener("keydown", e=> {if(e.key=="Escape") {this.hide()}} )
 
 		this.shadowRoot.appendChild(MarkUpCode.getHtmlTemplate(MarkUpCode.css()).cloneNode(true))
 	}
